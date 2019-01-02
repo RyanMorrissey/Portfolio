@@ -1,11 +1,11 @@
-<img align="middle" src="https://i.imgur.com/25ELF1O.gif?noredirect" alt="Hat Girl" height="900" width="1000">
 <div>
-  <h2>{{ 'HOME.TITLE' | translate }}</h2>
-  <label>
-    {{ 'HOME.SELECT' | translate }}
-    <select #langSelect (change)="translate.use(langSelect.value)">
-      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
-    </select>
-  </label>
+  <button (click)="useLanguage('en')">en</button>
+  <button (click)="useLanguage('de')">de</button>
+  <!-- translation: translation pipe -->
+  <h1 translate>demo.title</h1>
+  <h1 translate>demo.text</h1>
 </div>
+<img align="middle" src="https://i.imgur.com/25ELF1O.gif?noredirect" alt="Hat Girl" height="900" width="1000">
+
+
 

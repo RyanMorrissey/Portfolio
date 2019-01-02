@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+
+// import ngx-translate and the http loader
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
@@ -12,11 +14,6 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { KidComponent } from './kid/kid.component';
-
-// AoT requires an exported function for factories
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/languages/', '.json');
-}
 
 @NgModule({
   declarations: [
@@ -34,7 +31,7 @@ export function createTranslateLoader(http: HttpClient) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
+        useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
     }),
@@ -48,3 +45,8 @@ export function createTranslateLoader(http: HttpClient) {
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
