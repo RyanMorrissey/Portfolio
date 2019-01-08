@@ -46,7 +46,7 @@ import { KidComponent } from './kid/kid.component';
 })
 export class AppModule { }
 
-// required for AOT compilation
+// AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, "./assets/languages/", ".json");
 }

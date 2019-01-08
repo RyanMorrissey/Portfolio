@@ -10,7 +10,8 @@ export class KidComponent implements OnInit {
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
-    //translate.use('en');
+    translate.use('en');
+    console.log("test");
   }
 
   ngOnInit() {
