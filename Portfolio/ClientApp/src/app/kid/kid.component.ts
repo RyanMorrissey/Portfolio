@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+//import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-kid',
@@ -8,17 +8,17 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class KidComponent implements OnInit {
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
-    console.log("test");
+  constructor(/*private translate: TranslateService*/) {
+    //translate.setDefaultLang('en');
+    //translate.use('en');
+    //console.log("test");
   }
 
   ngOnInit() {
   }
 
-  useLanguage(language: string) {
-    this.translate.use(language);
-  }
+  //useLanguage(language: string) {
+  //  this.translate.use(language);
+  //}
 
 }
