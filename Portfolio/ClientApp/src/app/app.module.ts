@@ -3,13 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
-import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { KidComponent } from './kid/kid.component';
+import { TestService } from './shared/test.service'
+import { AppComponent } from './components/app/app.component';
+import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { HomeComponent } from './components/home/home.component';
+import { CounterComponent } from './components/counter/counter.component';
+import { KidComponent } from './components/kid/kid.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,6 @@ import { KidComponent } from './kid/kid.component';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent,
     KidComponent
   ],
   imports: [
@@ -31,7 +29,9 @@ import { KidComponent } from './kid/kid.component';
       { path: 'kid', component: KidComponent },
     ])
   ],
-  providers: [],
+  providers: [
+    TestService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

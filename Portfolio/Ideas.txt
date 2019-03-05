@@ -1,0 +1,20 @@
+﻿Set up Amazon DynamoDB
+-	Track browser information
+-	How many times each page has been visited
+Page that acts as a resume, with picture, skills, and experiences.
+-	Can have joke dropdown for Light/Dark theme, which will change my picture or text.
+Page for leaving messages
+-	Will just contain a string and an option to delete if I use a debug mode.  Include directions for debug mode to show it off.
+Login Page and User Preferences
+Page that generates a large box/grid that I can run algos on?
+-	Maybe have a large table that updates depending on the state.  So each box will have an object, including what image to load so that it looks interactive.  
+-	Maybe let users click on the box to put a barrier in place, and rerun the algo each time.  
+Page with a small browser game, maybe with some AI to play vs you?
+-	Tic Tac Toe?  Black Jack?
+Page that will read some sort of external API to display data?  
+Page that demonstrates translations being used
+-	Maybe translate a part of a book or something?
+Page that loads in statistics and makes informative graphs on them.
+-	Use external API to collect data, or maybe display data based on the site?
+Add logging 
+-	Serilog?
