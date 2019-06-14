@@ -5,18 +5,18 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { TestService } from './shared/test.service'
 import { AppComponent } from './components/app/app.component';
-import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { KidComponent } from './components/kid/kid.component';
+import { GraphicDesignComponent } from './components/graphic-design/graphic-design.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    KidComponent
+    KidComponent,
+    GraphicDesignComponent
   ],
   imports: [
     BrowserModule
@@ -27,6 +27,7 @@ import { KidComponent } from './components/kid/kid.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'kid', component: KidComponent },
+      { path: 'graphic-design', component: GraphicDesignComponent }
     ])
   ],
   providers: [

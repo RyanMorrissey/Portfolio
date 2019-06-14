@@ -1,10 +1,14 @@
-<div class='container-fluid'>
-  <div class='row'>
-    <div class='col-sm-3'>
-      <app-nav-menu></app-nav-menu>
-    </div>
-    <div class='col-sm-9 body-content'>
-      <router-outlet></router-outlet>
-    </div>
+<!-- Side navigation -->
+  <div class="sidenav">
+    <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+    <a class="nav-link" routerLink="/kid" routerLinkActive="active">Kid</a>
+    <a class="nav-link" routerLink="/graphic-design" routerLinkActive="active">Graphic Design</a>
+    <a class="nav-link" routerLink="/counter" routerLinkActive="active">Counter</a>
   </div>
+
+<!-- Page content -->
+<div class="main">
+  <router-outlet></router-outlet>
 </div>
+
+
