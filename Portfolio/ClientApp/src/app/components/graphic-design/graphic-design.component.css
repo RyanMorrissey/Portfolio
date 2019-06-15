@@ -1,0 +1,100 @@
+@-webkit-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px
+  }
+
+  50% {
+    background-color: #b4cfe0
+  }
+
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+    background-color: #6b92b9;
+  }
+}
+
+@-moz-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px
+  }
+
+  50% {
+    background-color: #b4cfe0
+  }
+
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+    background-color: #6b92b9;
+  }
+}
+
+@-ms-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px
+  }
+
+  50% {
+    background-color: #b4cfe0
+  }
+
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+    background-color: #6b92b9;
+  }
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px
+  }
+
+  50% {
+    background-color: #b4cfe0
+  }
+
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+    background-color: #6b92b9;
+  }
+}
+
+.snowEffect {
+  background-color: #6b92b9;
+  background-image: url('http://i.imgur.com/BiSmXaq.png'), url('http://i.imgur.com/XHuy0NJ.png'), url('http://i.imgur.com/okpRxJU.png');
+  -webkit-animation: snow 20s linear infinite;
+  -moz-animation: snow 20s linear infinite;
+  -ms-animation: snow 20s linear infinite;
+  animation: snow 20s linear infinite;
+}
+
+.small {
+  width: 25%;
+  float: left;
+  height: 50px;
+  box-shadow: 0px 0px 1px 1px #fff, 0px 0px 0px 10px rgba(255, 255, 255, 1);
+  margin-bottom: 10px;
+}
+
+.inWrapper {
+  float: none;
+  width: 100%
+}
+
+.height {
+  height: 110px
+}
+
+.long {
+  width: 50%
+}
+
+.smallwrapper {
+  display: inline-block;
+  float: left;
+  width: 25%
+}
+
+.frogImage {
+  position: absolute;
+  right: 10px;
+}
